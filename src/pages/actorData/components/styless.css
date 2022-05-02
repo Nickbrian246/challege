@@ -1,0 +1,28 @@
+.actorInfo-container{
+  width: auto;
+  height: 700px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+.actorInfo-img-container{
+  width: 150px;
+  max-height: 200px;
+}
+.actorInfo-name-element{
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+}
+.gender{
+  font-size: 20px;
+  background-color: yellow;
+  display: inline-block;
+  
+}
+.popularity{
+  font-size: 30px;
+  text-align: center;
+}
