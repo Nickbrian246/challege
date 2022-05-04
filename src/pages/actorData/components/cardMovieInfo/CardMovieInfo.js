@@ -14,39 +14,50 @@ const {
   Paragraph,
 } = Typography; 
 
-const CardMovieInfo = () => {
-  const state = useSelector((state) => state.actorName);
-console.log(state);
-console.log("hello there222")
+const CardMovieInfo = (...props) => {
+  // const {results} = useSelector((state) => state.actorName.actorName);
+//   const {id} = useSelector((state) => state.actorName.actorName.results[0]);
+// console.log(results);
+// console.log(id,'so id');
+// console.log("hello there222")
+// id,
+//   original_title,
+//   overview,
+//   poster_path,
+//   release_date,
+//   title,
+//   vote_average,
+//   vote_count,
+  console.log(props,'hola soy props');
+
 
   return (
     <>
     <div style={{width:'auto',height:'232px'}}>
     <Row justify="space-between" align="middle">
       <Col>
-        <Title>{state.actorName.results[0].known_for[0].title}</Title>
+        <Title>{}</Title>
       </Col>
       <Col>
-      <span>{state.actorName.results[0].popularity}</span>
+      <span>{}</span>
       </Col>
     </Row>
 
     <Row  justify="space-between" align="middle">
       <Col>
       <img style={{width:'100px'}}
-      src={`
-      https://api.themoviedb.org/3"${state.actorName.results[0].known_for.profile_path}`} title="moviePicture"/>
+      src={``} title="moviePicture"/>
       </Col>
 
       <Col>
 
       <div>
-        <Text>{state.actorName.results[0].known_for[0].overview}</Text>
+        <Text>{props.overview}</Text>
       </div>
       </Col>
 
     </Row>
-    <Paragraph>{state.actorName.results[0].known_for[0].release_date} </Paragraph>
+    <Paragraph>{} </Paragraph>
       <Divider></Divider>
     </div>
     </>

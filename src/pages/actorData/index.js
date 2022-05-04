@@ -8,8 +8,28 @@ import {ArrowLeftOutlined } from '@ant-design/icons'
 import { VertircalInformation } from "./components/VertircalInformation";
 import {CardMovie} from '../actorData/components/cardMovieInfo';
 
+import {isActorInStage} from "../../store/slices/actorNameSlice"
+
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+
+import { useNavigate} from "react-router-dom";
+
 
 const ActorInformation = () => {
+  const dispatch = useDispatch();
+  const {isActorOnStage} = useSelector((state)=> state.actorName);
+  const navigate = useNavigate();
+
+
+  const handleBackButton = () => {
+    dispatch( isActorInStage(false) );
+  }
+  if (isActorOnStage === false) {
+    navigate('/')
+  }
+
+
 
   return(
     <>
@@ -27,7 +47,7 @@ const ActorInformation = () => {
         span={24}
         >
 
-          <Button type="primary">
+          <Button type="primary" onClick={handleBackButton}>
           <ArrowLeftOutlined />
           Regresar
           </Button>
