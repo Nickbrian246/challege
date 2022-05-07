@@ -46,9 +46,9 @@ const props = {
   },
   onChange(info) {
     const { status } = info.file;
-    // if (status !== 'uploading') {
-    //   console.log('soy fileLis',info.file, info.fileList);
-    // }
+    if (status !== 'uploading') {
+      console.log('soy fileLis',info.file, info.fileList);
+    }
     if (status === 'done') {
       message.success(`${info.file.name} Imagen subida de manera exitosa.`);
       console.log(info.file.response.actorName );

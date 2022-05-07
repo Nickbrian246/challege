@@ -14,7 +14,7 @@ const {
   Paragraph,
 } = Typography; 
 
-const CardMovieInfo = (...props) => {
+const CardMovieInfo = (props) => {
   // const {results} = useSelector((state) => state.actorName.actorName);
 //   const {id} = useSelector((state) => state.actorName.actorName.results[0]);
 // console.log(results);
